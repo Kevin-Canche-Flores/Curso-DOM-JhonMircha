@@ -1,5 +1,17 @@
-const $btnBurguer = document.getElementById('btn-navigator')
+const $btnBurger = document.getElementById('btn-navigator');
+const $navBurger = document.getElementById('nav-navigator');
+const $navAnchors = document.querySelectorAll("nav a");
 
-$btnBurguer.addEventListener('click', (event) => {
-  $btnBurguer.classList.toggle('is-active')
+$btnBurger.addEventListener('click', (event) => {
+    $btnBurger.classList.toggle('is-active');
+    $navBurger.classList.toggle('display')
+});
+
+$navAnchors.forEach(navAnchor => {
+  navAnchor.addEventListener('click', (event) => {
+    $btnBurger.classList.toggle('is-active');
+    $navBurger.classList.toggle('display');
+    console.log(navAnchor)
+  })
 })
+
