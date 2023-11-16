@@ -25,15 +25,22 @@ h1 {
   
 }
 
-/****************************************************************Apartado del nav************************************************************************************/
+/***************************************************************************APARTADO DEL NAV************************************************************************************/
 nav {
   position: fixed;
-  top: 0;
-  z-index: 20;
-  background-color: rgba(0, 0, 0, .7);
+  bottom: -100%;
+  
+  background-color: rgba(0, 0, 0, .8);
 
   height: 100vh;
   width: 100%;
+  z-index: 20;
+  transition: .3s ease-in;
+}
+
+.display {
+  bottom: 0px;
+  transition: 0.3s ease-in;
 }
 
 nav ul {
@@ -57,13 +64,12 @@ nav ul li {
 
 nav a {
   display: block;
-  padding: 3rem 0;
+  padding: 4rem 0;
   color: rgb(252, 214, 24);
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 600;
   text-decoration: none;
-  
 }
 
 nav a:hover {
@@ -84,24 +90,20 @@ section h2 {
   font-size: 2rem;
 }
 
-
-
-
 /************************************************************ETIQUETAS QUE COMPARTEN VALORES***********************************************************************/
 h1, h2 {
   text-align: center;
 }
 
-
-
-
-
 /*****************************************************************APARTADO DEL BTN-BURGUER*************************************************************************/
 
 .hamburger {
   position: fixed;
-  bottom: 0;
-  right: 0;
+  bottom: 5px;
+  right: 5px;
+  background-color: rgb(252, 214, 24);
+  height: 5rem;
+  width: 5rem;
   padding: 15px 15px;
   display: inline-block;
   cursor: pointer;
@@ -111,8 +113,9 @@ h1, h2 {
   font: inherit;
   color: inherit;
   text-transform: none;
-  background-color: transparent;
+  /*background-color: transparent;*/
   border: 0;
+  border-radius: 50%;
   margin: 0;
   overflow: visible;
   z-index: 30;
@@ -133,6 +136,8 @@ h1, h2 {
 }
 
 .hamburger-box {
+  margin-left: -6.5px;
+  margin-top: -4px;
   width: 40px;
   height: 24px;
   display: inline-block;
@@ -142,13 +147,13 @@ h1, h2 {
 .hamburger-inner {
   display: block;
   top: 50%;
-  margin-top: -2px;
+  /*margin-top: -2px;*/
 }
 
 .hamburger-inner,
 .hamburger-inner::before,
 .hamburger-inner::after {
-  width: 40px;
+  width: 33px;
   height: 4px;
   background-color: #000;
   border-radius: 4px;
