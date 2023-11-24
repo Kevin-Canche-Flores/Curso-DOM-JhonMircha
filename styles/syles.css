@@ -10,6 +10,7 @@
 body {
   background-color: #eee;
   z-index: 10;
+  overflow: hidden;
 }
 
 header {
@@ -21,8 +22,7 @@ header {
 }
 
 h1 {
-  font-size: 3rem;
-  
+  font-size: 3.5rem; 
 }
 
 /***************************************************************************APARTADO DEL NAV************************************************************************************/
@@ -81,6 +81,7 @@ nav a:hover {
 
 /*************************************************************************APARTADO DEL SECTION*********************************************************************/
 section {
+  margin: 0 auto;
   font-size: 2.5rem;
 
   padding-top: 7rem;
@@ -89,12 +90,47 @@ section {
   border-bottom: #000;
 }
 
+
 section h2 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
+section h3 {
+  font-size: 2.5rem;
+  padding-top: 2rem;
+}
+
+.section-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.clock {
+  margin: 1.5rem ;
+}
+
+.clock button {
+  font-size: 1.5rem;
+  background-color: #ddd;
+
+  border-radius: 5px;
+  padding: .5rem;
+  margin-left: .5rem;
+  margin-right: .5rem;
+
+  cursor: pointer;
+}
+
+.clock button:hover {
+  background-color: rgb(252, 214, 24);
+}
+
+.clock button:active {
+  background-color: #ddd;
+}
 /************************************************************ETIQUETAS QUE COMPARTEN VALORES***********************************************************************/
-h1, h2 {
+h1, h2, h3 {
   text-align: center;
 }
 
