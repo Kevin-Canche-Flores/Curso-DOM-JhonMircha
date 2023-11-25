@@ -6,5 +6,5 @@ document.addEventListener("DOMContentLoaded", (event) => {
   hamburgerMenu(".hamburger", ".nav", "nav a");
  
   //Eventhandler Clock
-  digitalClock(".btn-play-clock", ".btn-stop-clock", ".btn-alarm-play", "btn-alarm-stop");
+  digitalClock(".btn-play-clock", ".btn-stop-clock", ".btn-alarm-play", ".btn-alarm-stop");
 })
