@@ -1,27 +1,44 @@
-export default function digitalClock (relojOn) {
+export default function digitalClock (relojOn, relojOff, alarmOn, alarmOff) {
+  // Declarar la variable para almacenar la referencia del intervalo
+  let intervalTime
+  let spanClock = document.querySelector('.digital-clock')
   
   document.addEventListener("click", (event) => {
 
-    if(event.target.matches(relojOn) || event.target.matches(`${relojOn} *`)){
+    if(event.target.matches(relojOn)){
+      
+      //OBTENEMOS LA HORA PARA PODER PASARLO A LA VISUALIZACIÓN DEL USUARIO.
+      const updateClock = () => {
       const time = new Date();
       let hours = time.getHours();
       let minutes = time.getMinutes();
       let seconds = time.getSeconds();
       
       // Asegurarse de que los minutos y segundos tengan dos dígitos
-      let horasConDosDigitos = hours.toString().padStart(2, '0');
-      let minutosConDosDigitos = minutes.toString().padStart(2, '0');
-      let segundosConDosDigitos = seconds.toString().padStart(2, '0');
+      let hoursWithTwoDigits = hours.toString().padStart(2, '0');
+      let minutesWithTwoDigits = minutes.toString().padStart(2, '0');
+      let secondsWithTwoDigits = seconds.toString().padStart(2, '0');
 
+      let formatedTime = `<span>${hoursWithTwoDigits}:${minutesWithTwoDigits}:${secondsWithTwoDigits}</span>`
+      spanClock.innerHTML = formatedTime; 
+    };
 
-      document.querySelector(relojOn).disabled = true;
+    document.querySelector(relojOn).disabled = true;
+
+    intervalTime = setInterval(updateClock, 1000)
+
+    updateClock()
     }
-console.log(event) 
-    // if(event.target.matches(menuLinks)){
-    //   document.querySelector(btnBurger).classList.remove('is-active')
-    //   document.querySelector(navBurguer).classList.remove('display')
-    //   console.log(event)
-    })
-  
-} 
-//, relojOff, alarmOn, alarmOff
+
+    if(event.target.matches(relojOff)){
+      //Limpiando y habilitando el botton de la hora.
+      clearInterval(intervalTime);
+
+      spanClock.innerHTML = '';
+
+      document.querySelector(relojOn).disabled = false;
+    }
+
+
+  })
+}

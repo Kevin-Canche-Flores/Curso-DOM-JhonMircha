@@ -129,6 +129,19 @@ section h3 {
 .clock button:active {
   background-color: #ddd;
 }
+
+/************************************************************APARTADO DEL SECTION 1***********************************************************************/
+.digital-clock {
+  margin-top: 1rem;
+}
+
+.digital-clock span {
+  font-size: 2.5rem;
+  font-weight: 600;
+  padding: 1rem;
+}
+
+
 /************************************************************ETIQUETAS QUE COMPARTEN VALORES***********************************************************************/
 h1, h2, h3 {
   text-align: center;
