@@ -1,7 +1,7 @@
 import  hamburgerMenu  from "./menu_hamburger.js";
 import digitalClock from "./digital_clock.js";
 import { shorcuts } from "./shortcuts.js";
-import {mostrarContadorDetallado} from "./dayCounter.js";
+import countDown from "./dayCounter.js";
 
 document.addEventListener("DOMContentLoaded", (event) => {
   //Eventhandler Menu hamburguesa
@@ -13,8 +13,5 @@ document.addEventListener("DOMContentLoaded", (event) => {
   //Event keydown
   shorcuts()
 
-  //Cuenta regresiva...
-  //Invocamos al setInterval que es el que nos va estar actualizando la cuenta regresiva...
-   setInterval(() => mostrarContadorDetallado(".countDown", '¡Hoy es tu cumpleaños!'), 1000);
-  
+  countDown(".countDown", "May 28, 2024", '¡Feliz cumpleaños! 🤓🤓');
 })
