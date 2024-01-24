@@ -2,6 +2,7 @@ import  hamburgerMenu  from "./menu_hamburger.js";
 import digitalClock from "./digital_clock.js";
 import { shorcuts } from "./shortcuts.js";
 import countDown from "./dayCounter.js";
+import arrowTop from "./arrowTop.js";
 
 document.addEventListener("DOMContentLoaded", (event) => {
   //Eventhandler Menu hamburguesa
@@ -14,9 +15,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
   shorcuts()
   //el countdown requiere de 3 parametros para iniciar su funcion que consta de: contenedor en el DOM, fecha valida que abmita JavaScript y el mensaje que tendra cuando se cumpla la cuenta regresiva.
   countDown(".countDown", "May 28, 2024", '¡Feliz cumpleaños! 🤓🤓');
-})
 
-document.addEventListener('scroll', (evento) => {
-  console.log(evento)
-  console.log(evento.screenY)
+  arrowTop("arrowTopBtn")
 })

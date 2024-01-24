@@ -272,3 +272,35 @@ h1, h2, h3 {
   transform: rotate(-90deg);
   transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
+
+/*****************************************************************APARTADO DEL ARROW-TOP*************************************************************************/
+
+.arrowTop {
+  position: fixed;
+  bottom: 5px;
+  right: 70px;
+  width: 5rem;
+  height: 5rem;
+  background-color: rgb(252, 214, 24);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  z-index: 997;
+  overflow: visible;
+  opacity: 0;
+  transition: all .3s;
+}
+.arrowTop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.arrowTop.active:hover {
+  opacity: .7;
+}
+
+.arrow {
+  font-size: 35px;
+}
