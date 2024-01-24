@@ -14,7 +14,7 @@ export default function countDown(container, limitDate, finalMessage) {
     const minutosTotales = Math.floor(segundosTotales / 60);
     const minutos = ('0' + minutosTotales % 60).toString().slice(-2);
     const horasTotales = Math.floor(minutosTotales / 60);
-    const horas = '0' + (horasTotales % 24).toString().slice(-2);
+    const horas = ('0' + horasTotales % 24).toString().slice(-2);
     const dias = Math.floor(horasTotales / 24);
 
     $countDown.innerHTML = `<h3>Faltan: ${dias} días ${horas} horas ${minutos} minutos ${segundos} segundos</h3>`
