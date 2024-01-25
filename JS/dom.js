@@ -3,6 +3,7 @@ import digitalClock from "./digital_clock.js";
 import { shorcuts } from "./shortcuts.js";
 import countDown from "./dayCounter.js";
 import arrowTop from "./arrowTop.js";
+import btnDarkMode from "./btn_dark_mode.js";
 
 document.addEventListener("DOMContentLoaded", (event) => {
   //Eventhandler Menu hamburguesa
@@ -17,4 +18,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
   countDown(".countDown", "May 28, 2024", '¡Feliz cumpleaños! 🤓🤓');
 
   arrowTop("arrowTopBtn")
+
+  btnDarkMode("btnDarkMode", "sun-moon")
 })

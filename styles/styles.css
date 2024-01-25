@@ -290,7 +290,7 @@ h1, h2, h3 {
   z-index: 997;
   overflow: visible;
   opacity: 0;
-  transition: all .3s;
+  transition: all .3s ease-in;
 }
 .arrowTop.active {
   opacity: 1;
@@ -303,4 +303,34 @@ h1, h2, h3 {
 
 .arrow {
   font-size: 35px;
+  color: rgb(0, 0, 0);
+}
+
+/*****************************************************************APARTADO DEL BTN-DARK-MODE*************************************************************************/
+
+.btn-dark-mode {
+  position: fixed;
+  bottom: 5px;
+  left: 5px;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: none;
+  background-color: rgb(252, 214, 24);
+  cursor: pointer;
+  transition: all .3s ease-in;
+}
+
+.btn-dark-mode:hover {
+  opacity: .7;
+}
+
+.btn-dark-mode i {
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+}
+
+.dark {
+  background-color: rgba(0, 0, 0, .9);
+  color: rgb(255, 255, 255);
 }
