@@ -19,5 +19,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   arrowTop("arrowTopBtn")
 
-  btnDarkMode("btnDarkMode", "sun-moon")
 })
+
+btnDarkMode(".btn-dark-mode", "sun-moon")

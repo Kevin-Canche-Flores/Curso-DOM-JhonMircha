@@ -10,7 +10,6 @@ export default function hamburgerMenu (btnBurger, navBurguer, menuLinks) {
     if(event.target.matches(menuLinks)){
       document.querySelector(btnBurger).classList.remove('is-active')
       document.querySelector(navBurguer).classList.remove('display')
-      console.log(event)
     }
   })
   
