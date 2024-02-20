@@ -105,6 +105,7 @@ section h3 {
   align-items: center;
 }
 
+
 .clock {
   margin: 1.5rem ;
 }
@@ -149,6 +150,28 @@ section h3 {
   font-size: 3rem;
   font-weight: 600;
   text-align: center;
+}
+
+/************************************************************APARTADO DEL SECTION 4***********************************************************************/
+
+.section-4 * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-4 a {
+  font-weight: 600;
+  font-size: 2rem;
+  color: rgb(252, 214, 24);
+}
+
+.section-4 a:hover {
+  color: rgb(0, 0, 0)
+}
+
+.section-4 div {
+  margin-top: 3rem;
 }
 
 
@@ -332,5 +355,9 @@ h1, h2, h3 {
 
 .dark {
   background-color: rgba(0, 0, 0, .9);
+  color: rgb(255, 255, 255);
+}
+
+.dark a:hover {
   color: rgb(255, 255, 255);
 }
