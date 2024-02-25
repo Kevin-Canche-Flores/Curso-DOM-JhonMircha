@@ -190,11 +190,12 @@ section h3 {
   font-size: 2rem;
 }
 
-.form-emergy-window input[type="submit"] {
+.form-emergy-window input[type="submit"], .form-emergy-window input[type="button"] {
   font-size: 1.5rem;
   font-weight: 600;
   width: 80%;
-  margin-top: 3rem;
+  margin-top: 2rem;
+  margin-right: 1.5rem;
   padding: .5rem;
   border: none;
   border-radius: 10px;
@@ -202,11 +203,17 @@ section h3 {
   transition: all .2s ease-in; 
 }
 
-.form-emergy-window input[type="submit"]:hover {
+.form-emergy-window input[type="submit"]:hover , .form-emergy-window input[type="button"]:hover {
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
 }
 
+.btn-open-close-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: inherit;
+}
 
 /************************************************************ETIQUETAS QUE COMPARTEN VALORES***********************************************************************/
 h1, h2, h3 {
