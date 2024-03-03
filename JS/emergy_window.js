@@ -10,7 +10,7 @@ export default function emergyWindow(url, width, height) {
     event.preventDefault();
       newWindow = window.open(
       `${windowUrl.value}`,
-      "Tester",
+      "tester", 
       `width=${windowWidth.value},height=${windowHeight.value}`)
   })
 
