@@ -215,6 +215,28 @@ section h3 {
   width: inherit;
 }
 
+
+/************************************************************APARTADO DEL SECTION 6*********************************************************************************/
+
+.section-6 ul {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.section-6 li, .section-6 b {
+  font-size: inherit;
+}
+
+.section-6 p {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  color: rgb(216, 180, 0);
+}
+
 /************************************************************ETIQUETAS QUE COMPARTEN VALORES***********************************************************************/
 h1, h2, h3 {
   text-align: center;
