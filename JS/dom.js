@@ -7,6 +7,7 @@ import btnDarkMode from "./btn_dark_mode.js";
 import responsiveMedia from "./responsive_object.js";
 import emergyWindow from "./emergy_window.js";
 import userDeviceInfo from "./device_detection.js";
+import detectConnection from "./detect_connection.js";
 
 document.addEventListener("DOMContentLoaded", (event) => {
   //Eventhandler Menu hamburguesa
@@ -35,6 +36,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
   emergyWindow("url_window", "window_width", "window_heigh");
 
   userDeviceInfo("user_agent");
+
+ 
 })
 
-btnDarkMode(".btn-dark-mode", "sun-moon")
+btnDarkMode(".btn-dark-mode", "sun-moon") 
+
+  detectConnection();
