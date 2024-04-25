@@ -6,7 +6,6 @@ export default function detectConnection(id) {
     if(navigator.onLine){
       $div.textContent = 'De nuevo en línea.'
       $div.classList.add("online")
-      $div.classList.remove("offline")
       setTimeout(()=> document.body.removeChild($div), 2000)
     } else {
       $div.textContent = 'Sin conexión.'
