@@ -35,7 +35,6 @@ nav {
   background-color: rgba(0, 0, 0, .8);
 
   width: 100%;
-  transform: translate(0, 50);
   z-index: 998;
   transform: translate(0, 100%);
   transition: transform 0.3s ease-in;
@@ -423,4 +422,37 @@ h1, h2, h3 {
 
 .dark a:hover {
   color: rgb(255, 255, 255);
+}
+
+/*****************************************************************APARTADO DEL ESTADO DE CONECCIÓN*************************************************************************/
+.conection {
+  position: fixed;
+  top: -10;
+  height: 2rem;
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: center;
+  z-index: 998;
+}
+
+.online {
+  background-color: rgb(20, 23, 20);
+  animation: stateConnection 1s ease reverse;
+  animation-delay: 1s;
+}
+
+.offline {
+  background-color: rgb(204, 51, 0);
+  animation: stateConnection .5s ease;
+}
+
+@keyframes stateConnection {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
