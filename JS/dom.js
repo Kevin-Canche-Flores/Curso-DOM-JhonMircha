@@ -8,6 +8,7 @@ import responsiveMedia from "./responsive_object.js";
 import emergyWindow from "./emergy_window.js";
 import userDeviceInfo from "./device_detection.js";
 import detectConnection from "./detect_connection.js";
+import detectCamera from "./get_user_media.js";
 
 document.addEventListener("DOMContentLoaded", (event) => {
   //Eventhandler Menu hamburguesa
@@ -37,9 +38,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   userDeviceInfo("user_agent");
 
- 
+  detectCamera("stream_video")
 })
 
 btnDarkMode(".btn-dark-mode", "sun-moon") 
 
-  detectConnection();
+detectConnection();

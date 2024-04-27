@@ -236,6 +236,19 @@ section h3 {
   color: rgb(216, 180, 0);
 }
 
+
+/************************************************************APARTADO DEL SECTION 7*********************************************************************************/
+
+.section-7 div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-7 video {
+  object-fit: cover;
+}
+
 /************************************************************ETIQUETAS QUE COMPARTEN VALORES***********************************************************************/
 h1, h2, h3 {
   text-align: center;
