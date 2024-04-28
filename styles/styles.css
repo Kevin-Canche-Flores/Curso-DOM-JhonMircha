@@ -247,10 +247,6 @@ section h3 {
   align-items: center;
 }
 
-.section-7 video {
-  object-fit: cover;
-}
-
 /************************************************************ETIQUETAS QUE COMPARTEN VALORES***********************************************************************/
 h1, h2, h3 {
   text-align: center;
