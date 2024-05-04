@@ -20,7 +20,7 @@ export default function getGeolocation (id) {
   }
 
   const error = (error) => {
-    $contenedorGeolocation.innerHTML = `<p>Geolocation is not supported by your browser</p>`
+    $contenedorGeolocation.innerHTML = `<h3>No hemos podido acceder a su ubicación geográfica. Esto puede deberse a que los permisos de geolocalización en su ordenador están bloqueados. Para continuar, por favor active sus permisos de GPS.</h3>`
     console.log(error)
   }
 
@@ -34,6 +34,7 @@ export default function getGeolocation (id) {
   $contenedorGeolocation.innerHTML = "<h3>Localizando…</h3>"
     window.navigator.geolocation.getCurrentPosition(success, error, options)
  } else { 
+  $contenedorGeolocation.innerHTML = `<p>Geolocation is not supported by your browser</p>`
   console.log("geolocation IS NOT available.")
 }
  
