@@ -10,6 +10,7 @@ import userDeviceInfo from "./device_detection.js";
 import detectConnection from "./detect_connection.js";
 import detectCamera from "./get_user_media.js";
 import getGeolocation from "./geolocation.js";
+import searchFilter from "./filter.js";
 
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -43,6 +44,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
   detectCamera("stream_video");
 
   getGeolocation("geolocalización")
+
+  searchFilter("search", ".card")
 })
 
 btnDarkMode(".btn-dark-mode", "sun-moon") 
