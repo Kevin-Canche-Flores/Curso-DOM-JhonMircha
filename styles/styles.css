@@ -274,15 +274,13 @@ section h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.section-9 h2 {
-  margin-bottom: 2rem;
+  height: 100%;
 }
 
 .search-box {
-  width: 500px;
-  min-width: 250px;
+  width: 50%;
+  max-width: 500px;
+  min-width: 200px;
   height: 40px;
   vertical-align: middle;
   white-space: nowrap;
@@ -331,6 +329,10 @@ section h3 {
   z-index: 990;
 }
 
+.cards {
+  margin-bottom: 3rem;
+}
+
 .cards figure {
   position: relative;
   width: 250px;
@@ -362,6 +364,55 @@ section h3 {
   border-radius: 5px;
   border: none;
 }
+
+/************************************************************APARTADO DEL SECTION 10*********************************************************************************/
+.section-10 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-10 h2 {
+ margin-bottom: 2rem;
+}
+
+.rule-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rule-list li {
+  margin-bottom: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+.button-rule {
+  width: 15%;
+  padding: .5rem;
+  min-width: 10rem;
+
+  font-weight: 600;
+
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+
+  transition: all .2s ease;
+}
+
+.button-rule:hover {
+  background-color: rgb(252, 214, 24);
+  color: rgb(255, 255, 255);
+}
+
+.button-rule:active {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
 
 /************************************************************ETIQUETAS QUE COMPARTEN VALORES***********************************************************************/
 h1, h2, h3 {

@@ -11,6 +11,7 @@ import detectConnection from "./detect_connection.js";
 import detectCamera from "./get_user_media.js";
 import getGeolocation from "./geolocation.js";
 import searchFilter from "./filter.js";
+import randomRoulette from "./rule.js";
 
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -46,6 +47,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
   getGeolocation("geolocalización")
 
   searchFilter("search", ".card")
+
+  randomRoulette("btn-rule", "list-rule")
 })
 
 btnDarkMode(".btn-dark-mode", "sun-moon") 

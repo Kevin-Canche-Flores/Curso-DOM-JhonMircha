@@ -1,6 +1,7 @@
 export default function searchFilter (id, cards) {
   const $search = document.getElementById(id)
   const $cards = document.querySelectorAll(cards)
+
   $search.addEventListener('keyup', () => {
 
     const $searchText = document.getElementById(id).value.toLowerCase()
