@@ -12,6 +12,7 @@ import detectCamera from "./get_user_media.js";
 import getGeolocation from "./geolocation.js";
 import searchFilter from "./filter.js";
 import randomRoulette from "./rule.js";
+import responsiveSlider from "./responsive.slider.js";
 
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -49,6 +50,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
   searchFilter("search", ".card")
 
   randomRoulette("btn-rule", "list-rule")
+
+  responsiveSlider(".slider", ".slider img", ".btn-right", ".btn-left")
 })
 
 btnDarkMode(".btn-dark-mode", "sun-moon") 
