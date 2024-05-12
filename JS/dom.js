@@ -12,7 +12,7 @@ import detectCamera from "./get_user_media.js";
 import getGeolocation from "./geolocation.js";
 import searchFilter from "./filter.js";
 import randomRoulette from "./rule.js";
-import responsiveSlider from "./responsive.slider.js";
+import responsiveSlider from "./responsive_slider.js";
 
 
 document.addEventListener("DOMContentLoaded", (event) => {
