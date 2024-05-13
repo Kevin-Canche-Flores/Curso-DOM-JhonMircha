@@ -9,6 +9,7 @@
 </head>
 <body>
   <header><h1>Ejercicios del DOM</h1></header>
+  <div class="content-elements">
     <nav id="nav-navigator" class="nav">
       <ul>
         <li><a href="#section1">Reloj Digital y Alarma Sonora</a></li>
@@ -140,12 +141,12 @@
       </section>  
       <section id="section11" class="section-11">
         <h2>Responsive Slider</h2>
-        
+      
         <div class="slider-wrapper">
           <div class="btn-content-slider btn-left">
             <i class="fa-solid fa-chevron-left"></i>
-          </div>          
-          <div class="slider">  
+          </div>
+          <div class="slider">
             <img src="media/images/images-section11/imagen-1.jpg" alt="">
             <img src="media/images/images-section11/imagen-2.jpg" alt="">
             <img src="media/images/images-section11/imagen-3.jpg" alt="">
@@ -159,22 +160,25 @@
             <i class="fa-solid fa-chevron-right"></i>
           </div>
         </div>
-        
-      </section>
+      
+      </section>  
+      <div class="arrowTop" id="arrowTopBtn">
+        <i class="fa-solid fa-arrow-up arrow"></i>
+      </div>
+      <button id="btnDarkMode" title="btn-dark-mode" type="button" class="btn-dark-mode">
+        <i id="sun-moon" class="fa-solid fa-moon"></i>
+      </button>
     </main>
+  </div>
     <button id="btn-navigator" class="hamburger hamburger--spin" type="button" title="Menú">
       <span class="hamburger-box">
         <span class="hamburger-inner"></span>
       </span>
     </button>
-    <div class="arrowTop" id="arrowTopBtn">
-      <i class="fa-solid fa-arrow-up arrow"></i>
-    </div>
-    <button id="btnDarkMode" title="btn-dark-mode" type="button" class="btn-dark-mode">
-      <i id="sun-moon" class="fa-solid fa-moon"></i>
-    </button>
 
+    
     <!-- APARTADO DEL SCRIPT -->
     <script src="JS/dom.js" type="module"></script>
-</body>
-</html>
+    </body>
+    
+    </html>
