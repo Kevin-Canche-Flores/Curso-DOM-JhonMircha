@@ -13,6 +13,9 @@ import getGeolocation from "./geolocation.js";
 import searchFilter from "./filter.js";
 import randomRoulette from "./rule.js";
 import responsiveSlider from "./responsive_slider.js";
+import observerIntersection from "./scroll_spy.js";
+import observerIntersectionVideo from "./scrollSpyVideo.js";
+import visibilityChangePage from "./visibilityPage.js";
 
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -36,7 +39,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   
   responsiveMedia("google_maps",
                   "(max-width: 767px)",
-                  '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.773753037828!2d-88.57105182495371!3d20.678781630884394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5138b9a098f833%3A0xf70a67530750d45!2zOTc3NTEgQ2hpY2jDqW4gSXR6w6EsIFl1Yy4!5e0!3m2!1ses-419!2smx!4v1708388452300!5m2!1ses-419!2smx" width="500" height="370" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
+                  '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.773753037828!2d-88.57105182495371!3d20.678781630884394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5138b9a098f833%3A0xf70a67530750d45!2zOTc3NTEgQ2hpY2jDqW4gSXR6w6EsIFl1Yy4!5e0!3m2!1ses-419!2smx!4v1708388452300!5m2!1ses-419!2smx" width="500" height="370" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" autoplay></iframe>',
                   '<a href="https://maps.app.goo.gl/GEi82iixgyEjgijL7" target="_blank" rel="noopener noreferrer">ChiChén Itza - Google Maps</>');
 
   emergyWindow("url_window", "window_width", "window_heigh");
@@ -51,7 +54,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   randomRoulette("btn-rule", "list-rule")
 
-  responsiveSlider(".slider", ".slider img", ".btn-right", ".btn-left")
+  responsiveSlider(".slider-wrapper", ".slider", ".slider img", ".btn-right", ".btn-left")
+
+  observerIntersection(".observer")
+
+  observerIntersectionVideo(".video-inteligente")
+
+  visibilityChangePage()
 })
 
 btnDarkMode(".btn-dark-mode", "sun-moon") 
