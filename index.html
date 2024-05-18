@@ -12,24 +12,24 @@
   <div class="content-elements">
     <nav id="nav-navigator" class="nav">
       <ul>
-        <li><a href="#section1">Reloj Digital y Alarma Sonora</a></li>
-        <li><a href="#section2">Eventos Keydown</a></li>
-        <li><a href="#section3">Countdown</a></li>
-        <li><a href="#section4">Responsive Media</a></li>
-        <li><a href="#section5">Ventana Emergente</a></li>
-        <li><a href="#section6">Agente Usuario</a></li>
-        <li><a href="#section7">Detección de Camara</a></li>
-        <li><a href="#section8">Geolocalización</a></li>
-        <li><a href="#section9">Filtrar Busquedas</a></li>
-        <li><a href="#section10">Juego de azar</a></li>
-        <li><a href="#section11">Responsive Slider</a></li>
-        <li><a href="#section9">Filtrar Busquedas</a></li>
-        <li><a href="#section9">Filtrar Busquedas</a></li>
-        <li><a href="#section9">Filtrar Busquedas</a></li>
+        <li><a href="#section1" data-scroll-spy>Reloj Digital y Alarma Sonora</a></li>
+        <li><a href="#section2" data-scroll-spy>Eventos Keydown</a></li>
+        <li><a href="#section3" data-scroll-spy>Countdown</a></li>
+        <li><a href="#section4" data-scroll-spy>Responsive Media</a></li>
+        <li><a href="#section5" data-scroll-spy>Ventana Emergente</a></li>
+        <li><a href="#section6" data-scroll-spy>Agente Usuario</a></li>
+        <li><a href="#section7" data-scroll-spy>Detección de Camara</a></li>
+        <li><a href="#section8" data-scroll-spy>Geolocalización</a></li>
+        <li><a href="#section9" data-scroll-spy>Filtrar Busquedas</a></li>
+        <li><a href="#section10" data-scroll-spy>Juego de azar</a></li>
+        <li><a href="#section11" data-scroll-spy>Responsive Slider</a></li>
+        <li><a href="#section12" data-scroll-spy>Video Inteligente</a></li>
+        <li><a href="#section9" data-scroll-spy>Filtrar Busquedas</a></li>
+        <li><a href="#section9" data-scroll-spy>Filtrar Busquedas</a></li>
       </ul>
     </nav>
     <main>
-      <section id="section1" class="section-1">
+      <section id="section1" class="section-1 observer">
         <h2>Section 1</h2>
         <h3>Reloj Digital y Alarma Sonora</h3>
         <div class="digital-clock">
@@ -43,20 +43,20 @@
         </div>
         <audio src=""></audio>
       </section>
-      <section id="section2">
+      <section id="section2" class="observer">
         <h2>Sección 2</h2>
       </section>
-      <section id="section3">
+      <section id="section3" class="observer">
         <h2>Countdown</h2>
         <div class="countDown ">
         </div>  
       </section>
-      <section id="section4" class="section-4">
+      <section id="section4" class="section-4 observer">
         <h2>Responsive Media</h2>
         <div id="youtube"></div>
         <div id="google_maps"></div>
       </section>
-      <section id="section5" class="section-5">
+      <section id="section5" class="section-5 observer">
         <h2>Ventana Emergente</h2>
         <div id="emergy_window" class="form-emergy-window">
           <form id="form">
@@ -76,23 +76,23 @@
           </form>
         </div>
       </section>
-      <section id="section6" class="section-6">
+      <section id="section6" class="section-6 observer">
         <h2>Detección de Dispositivos</h2>
         <h2>(User Agent)</h2>
         <div id="user_agent"></div>
       </section>
-      <section id="section7" class="section-7">
+      <section id="section7" class="section-7 observer">
         <h2>Detección de Camara</h2>
         <h2>Stream</h2>
         <div id="content_video">
           <video id="stream_video" width="500px" height="500px" poster="/media/images/Kerfin7_NEA_2342.jpg" autoplay></video>
         </div>
       </section>
-      <section id="section8" class="section-8">
+      <section id="section8" class="section-8 observer">
         <h2>Geolocalización</h2>
         <div id="geolocalización"></div>
       </section>
-      <section id="section9" class="section-9">
+      <section id="section9" class="section-9 observer">
         <h2>Filtros de Busqueda</h2>
         <div id="search-box" class="search-box">
           <i class="fa-solid fa-magnifying-glass icon"></i>
@@ -125,7 +125,7 @@
           </figure>
         </article>
       </section>
-      <section id="section10" class="section-10">
+      <section id="section10" class="section-10 observer">
         <h2>Juego de Azar</h2>
         <ul id="list-rule" class="rule-list">
           <li class="list-element">JavaScript</li>
@@ -139,7 +139,7 @@
         </ul>
         <input type="button" value="Dale" id="btn-rule" class="button-rule">
       </section>  
-      <section id="section11" class="section-11">
+      <section id="section11" class="section-11 observer">
         <h2>Responsive Slider</h2>
       
         <div class="slider-wrapper">
@@ -161,7 +161,17 @@
           </div>
         </div>
       
-      </section>  
+      </section>
+      <section id="section12" class="section-12 observer">
+        <h2>Video Inteligente</h2>
+        <div id="videoInteligente" class="videoInteligente">
+          <video class="video-inteligente" controls>
+            <source src="media/video/video-section-12.mp4">
+            <!-- Texto alternativo para navegadores que no soportan el elemento <video> -->
+            Tu navegador no soporta el elemento de video.
+          </video>
+        </div>
+      </section> 
       <div class="arrowTop" id="arrowTopBtn">
         <i class="fa-solid fa-arrow-up arrow"></i>
       </div>

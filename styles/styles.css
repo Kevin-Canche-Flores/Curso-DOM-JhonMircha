@@ -73,10 +73,16 @@ h1 {
   font-size: 1.4rem;
   font-weight: 600;
   text-decoration: none;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav a:hover {
    color: rgb(0, 0, 0);
+}
+
+a.active-anchor {
+  background-color: rgb(252, 214, 24);
+  color: rgb(255, 255, 255);
 }
 
 /*************************************************************************APARTADO DEL SECTION*********************************************************************/
@@ -232,6 +238,7 @@ section h3 {
 
 .section-6 li, .section-6 b {
   font-size: inherit;
+  text-align: center;
 }
 
 .section-6 p {
@@ -443,6 +450,7 @@ section h3 {
   height: 50px;
   
   background-color: rgb(20, 23, 20);
+  color: rgb(252, 214, 24);
   border-radius: 50%;
   z-index: 992;
   transition: all .3s ease-in;
@@ -452,7 +460,7 @@ section h3 {
 }
 
 .btn-content-slider:hover {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(252, 214, 24);
   color: rgb(0, 0, 0);
   opacity: .7;
 }
@@ -487,6 +495,26 @@ section h3 {
 
   aspect-ratio: 16/9 ;
   object-fit: cover;
+}
+
+/************************************************************APARTADO DEL SECTION 12*********************************************************************************/
+
+.section-12 h2 {
+  margin-bottom: 2rem;
+}
+
+.videoInteligente {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.videoInteligente video {
+  width: 70%;
+  min-width: 250px;
+  height: auto;
+  aspect-ratio: 16/9;
 }
 
 
