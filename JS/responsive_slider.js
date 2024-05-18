@@ -37,7 +37,9 @@ export default function responsiveSlider(boxSlider, slider, images, inputRight, 
     entries.forEach(entry => {
      if(entry.isIntersecting) {
       intervalSLider() 
-      console.log(entry.isIntersecting)
+    } else {
+      clearInterval(intervalSLider)
+      intervalSLider = null
     }
     });
   }
