@@ -42,7 +42,7 @@ export default function responsiveSlider(boxSlider, slider, images, inputRight, 
       intervalSLider = null
     }
     });
-  }
+  } 
 
   const observer = new IntersectionObserver(sliderInterval, options)
   observer.observe($sliderWrapper)

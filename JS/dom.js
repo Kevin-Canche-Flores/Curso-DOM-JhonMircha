@@ -16,6 +16,7 @@ import responsiveSlider from "./responsive_slider.js";
 import observerIntersection from "./scroll_spy.js";
 import observerIntersectionVideo from "./scrollSpyVideo.js";
 import visibilityChangePage from "./visibilityPage.js";
+import formulario from "./formulario.js";
 
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -61,6 +62,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
   observerIntersectionVideo(".video-inteligente")
 
   visibilityChangePage()
+
+  formulario("formulario")
 })
 
 btnDarkMode(".btn-dark-mode", "sun-moon") 
