@@ -24,7 +24,7 @@
         <li><a href="#section10" data-scroll-spy>Juego de azar</a></li>
         <li><a href="#section11" data-scroll-spy>Responsive Slider</a></li>
         <li><a href="#section12" data-scroll-spy>Video Inteligente</a></li>
-        <li><a href="#section9" data-scroll-spy>Filtrar Busquedas</a></li>
+        <li><a href="#section13" data-scroll-spy>Formulario de Contacto (Validaciones)</a></li>
         <li><a href="#section9" data-scroll-spy>Filtrar Busquedas</a></li>
       </ul>
     </nav>
@@ -171,7 +171,61 @@
             Tu navegador no soporta el elemento de video.
           </video>
         </div>
-      </section> 
+      </section>
+      <section id="section13" class="section-13">
+        <h2>Formulario de Contacto (Validaciones)</h2>
+        <h3>Envíanos tus comentarios</h3>
+        <form action="#" class="formulario" id="formulario">
+          <!-- Grupo: Name -->
+           <div class="formulario_grupo" id="grupo_name">
+            <div class="formulario_grupo-input">
+              <input type="text" class="formulario_input" name="name" placeholder="Escribe tu nombre" required autocomplete="">
+              <i class="formulario_validacion-estado fa-solid fa-circle-xmark"></i>
+            </div>
+            <p class="formulario_input-error">El nombre tiene que estar conformado de 3 a 50 caracteres y solo puede contener letras y espacios.</p>
+           </div>
+
+           <!-- Grupo: Email -->
+           <div class="formulario_grupo" id="grupo_email">
+            <div class="formulario_grupo-input">
+              <input type="email" class="formulario_input" name="email" placeholder="Escribe tu email" required autocomplete="">
+              <i class="formulario_validacion-estado fa-solid fa-circle-xmark"></i>
+            </div>
+            <p class="formulario_input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+           </div>
+
+           <!-- Grupo: Asunto -->
+           <div class="formulario_grupo" id="grupo_asunto">
+            <div class="formulario_grupo-input">
+              <input type="text" class="formulario_input" name="asunto" placeholder="Asunto a tratar" required>
+              <i class="formulario_validacion-estado fa-solid fa-circle-xmark"></i>
+            </div>
+            <p class="formulario_input-error">El asunto debe estar conformado de 4 a 50 caracteres.</p> 
+           </div>
+
+           <!-- Grupo: Telefono -->
+           <div class="formulario_grupo" id="grupo_telefono">
+            <div class="formulario_grupo-input">
+              <input type="text" class="formulario_input" name="telefono" placeholder="Teléfono">
+              <i class="formulario_validacion-estado fa-solid fa-circle-xmark"></i>
+            </div>
+            <p class="formulario_input-error">El teléfono solo puede contener numeros y el maximo son 14 digitos.</p> 
+           </div>
+          
+           <!-- Grupo: Comentarios -->
+          <textarea class="formulario_comentarios" name="comentarios" placeholder="Dejanos tus comentarios" rows="6" cols="50" maxlength="500"></textarea>
+
+          <div class="formulario_mensaje" id="formulario_mensaje">
+            <p><i class="fa-solid fa-triangle-exclamation"></i> <b>Error:</b> Por favor rellena el formulario correctamente.</p>
+          </div>
+
+
+          <div class="formulario_grupo formulario_grupo-btn-enviar">
+            <button type="submit" class="formulario-btn">Enviar</button>
+            <p class="formulario_mensaje-exito" id="formulario_mensaje-exito">Formulario enviado exitosamente!</p>
+          </div>
+        </form>   
+      </section>
       <div class="arrowTop" id="arrowTopBtn">
         <i class="fa-solid fa-arrow-up arrow"></i>
       </div>
