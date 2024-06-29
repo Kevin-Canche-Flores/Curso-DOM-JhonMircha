@@ -4,7 +4,7 @@ export default function emergyWindow(url, width, height) {
   const windowWidth = document.getElementById(width)
   const windowHeight = document.getElementById(height)
   const $btnCloseWindow = document.querySelector(".close_window")
-  let newWindow;
+  let newWindow;  
 
   $form.addEventListener("submit", (event) => {
     event.preventDefault();

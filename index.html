@@ -25,7 +25,7 @@
         <li><a href="#section11" data-scroll-spy>Responsive Slider</a></li>
         <li><a href="#section12" data-scroll-spy>Video Inteligente</a></li>
         <li><a href="#section13" data-scroll-spy>Formulario de Contacto (Validaciones)</a></li>
-        <li><a href="#section9" data-scroll-spy>Filtrar Busquedas</a></li>
+        <li><a href="#section14" data-scroll-spy>Narrador</a></li>
       </ul>
     </nav>
     <main>
@@ -147,14 +147,14 @@
             <i class="fa-solid fa-chevron-left"></i>
           </div>
           <div class="slider">
-            <img src="media/images/images-section11/imagen-1.jpg" alt="">
-            <img src="media/images/images-section11/imagen-2.jpg" alt="">
-            <img src="media/images/images-section11/imagen-3.jpg" alt="">
-            <img src="media/images/images-section11/imagen-4.jpg" alt="">
-            <img src="media/images/images-section11/imagen-5.jpg" alt="">
-            <img src="media/images/images-section11/imagen-6.jpg" alt="">
-            <img src="media/images/images-section11/imagen-7.jpg" alt="">
-            <img src="media/images/images-section11/imagen-8.jpg" alt="">
+            <img src="media/images/images-section11/imagen-1.jpg" alt="Etiqueta de HTML">
+            <img src="media/images/images-section11/imagen-2.jpg" alt="Auto de Carreras Estacionado">
+            <img src="media/images/images-section11/imagen-3.jpg" alt="Computadora con ilustraciones sobre marketing">
+            <img src="media/images/images-section11/imagen-4.jpg" alt="Palmera junto al mar">
+            <img src="media/images/images-section11/imagen-5.jpg" alt="Fachada de casa con piscina">
+            <img src="media/images/images-section11/imagen-6.jpg" alt="Fachada de casa al atardecer">
+            <img src="media/images/images-section11/imagen-7.jpg" alt="Fragmento de codigo React">
+            <img src="media/images/images-section11/imagen-8.jpg" alt="Niña sonriendo">
           </div>
           <div class="btn-content-slider btn-right">
             <i class="fa-solid fa-chevron-right"></i>
@@ -172,10 +172,10 @@
           </video>
         </div>
       </section>
-      <section id="section13" class="section-13">
+      <section id="section13" class="section-13 observer">
         <h2>Formulario de Contacto (Validaciones)</h2>
         <h3>Envíanos tus comentarios</h3>
-        <form action="#" class="formulario" id="formulario">
+        <form action="https://formsubmit.co/soykanonflores@gmail.com" method="POST" class="formulario" id="formulario" target="_blank">
           <!-- Grupo: Name -->
            <div class="formulario_grupo" id="grupo_name">
             <div class="formulario_grupo-input">
@@ -225,6 +225,20 @@
             <p class="formulario_mensaje-exito" id="formulario_mensaje-exito">Formulario enviado exitosamente!</p>
           </div>
         </form>   
+      </section>
+      <section id="section14" class="section-14 observer">
+        <!-- SECTION DEL NARRADOR -->
+        <h2>Narrador</h2>
+        <form id="form-narrador" class="form-narrador">
+          <select name="voices" id="voices" class="voices-select" title="Selecciona una voz">
+          </select>
+          <textarea name="texto-a-leer" id="utterrance" class="utterrance" title="Ingresa texto" rows="15" data-name="DEFAULT" placeholder="Ingresa texto"></textarea>
+          <button id="text-reader" class="text-reader formulario-btn" type="button">Leer texto</button>
+        </form>
+        
+        <figure class="card">
+          <img src="https://www.sdpnoticias.com/resizer/v2/RGAUHRCQZJCOXMT3VCVXAWLOFE.jpg?smart=true&auth=94ddfb4bea30d981773f1c951a81fd929826f5a1c967e651723e25a72e25defc&width=640&height=360" alt="El ataque de ansiedad de Riley en intensamente 2">
+        </figure>
       </section>
       <div class="arrowTop" id="arrowTopBtn">
         <i class="fa-solid fa-arrow-up arrow"></i>

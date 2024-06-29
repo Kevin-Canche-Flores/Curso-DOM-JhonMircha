@@ -17,6 +17,7 @@ import observerIntersection from "./scroll_spy.js";
 import observerIntersectionVideo from "./scrollSpyVideo.js";
 import visibilityChangePage from "./visibilityPage.js";
 import formulario from "./formulario.js";
+import textReader from "./text_reader.js";
 
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -64,8 +65,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
   visibilityChangePage()
 
   formulario("formulario")
+
 })
 
 btnDarkMode(".btn-dark-mode", "sun-moon") 
 
 detectConnection();
+
+textReader("voices", "utterrance")

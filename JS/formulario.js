@@ -57,14 +57,14 @@ export default function formulario(form) {
   })
 
   document.addEventListener("submit", (e) => {
-    e.preventDefault()
+    
     if(campos.name && campos.email && campos.asunto && campos.telefono){
-      formulario.reset()
 
       document.getElementById("formulario_mensaje").classList.remove("formulario_mensaje-activo")
       
       document.getElementById("formulario_mensaje-exito").classList.add("formulario_mensaje-exito-activo")
       setTimeout(() => {
+        formulario.reset()
         document.getElementById("formulario_mensaje-exito").classList.remove("formulario_mensaje-exito-activo")
       }, 5000);
 

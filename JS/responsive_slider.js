@@ -29,7 +29,7 @@ export default function responsiveSlider(boxSlider, slider, images, inputRight, 
   })
 
   /* APARTADO DEL INTERSECTION OBSERVER DEL ELEMENTO SLIDER */
-   intervalSLider = () => {
+    intervalSLider = () => {
     setInterval(sliderNext, 5000)
   } 
 
