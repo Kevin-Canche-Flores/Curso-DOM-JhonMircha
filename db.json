@@ -1,0 +1,54 @@
+{
+  "santos": [
+    {
+      "nombre": "Seiya",
+      "constelacion": "Pegaso",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "nombre": "Shiryu",
+      "constelacion": "Dragon"
+    },
+    {
+      "id": "3",
+      "nombre": "Hyoga",
+      "constelacion": "Cisne"
+    },
+    {
+      "nombre": "Shun",
+      "constelacion": "Andromeda",
+      "id": "4"
+    },
+    {
+      "id": "06ac",
+      "nombre": "Kanon",
+      "constelacion": "Geminis"
+    },
+    {
+      "id": "8ca9",
+      "nombre": "Saga",
+      "constelacion": "Geminis"
+    },
+    {
+      "id": "a6f4",
+      "nombre": "Mu",
+      "constelacion": "Aries"
+    },
+    {
+      "id": "54c3",
+      "nombre": "Mascara de Muerte",
+      "constelacion": "Cancer"
+    },
+    {
+      "id": "c39c",
+      "nombre": "Aioria",
+      "constelacion": "Leo"
+    },
+    {
+      "id": "64f8",
+      "nombre": "Milo",
+      "constelacion": "Escorpio"
+    }
+  ]
+}
