@@ -1,0 +1,227 @@
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRUD API REST AJAX FETCH</title>
+</head>
+
+<body>
+  <h1>CRUD API REST AJAX FETCH</h1>
+  <section class="crud">
+    <article>
+      <h2 class="crud-title">Agregar Santo</h2>
+      <form class="crud-form">
+        <input type="text" name="nombre" placeholder="nombre" required />
+        <br />
+        <input type="text" name="constelacion" placeholder="constelación" required />
+        <br />
+        <input type="submit" value="Enviar" />
+        <input type="hidden" name="id" />
+      </form>
+    </article>
+    <article>
+      <h2>Ver Santos</h2>
+      <table class="crud-table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Constelación</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </article>
+  </section>
+  <template id="crud-template">
+    <tr>
+      <td class="id"></td>
+      <td class="name"></td>
+      <td class="constellation"></td>
+      <td>
+        <button class="edit">Editar</button>
+        <button class="delete">Eliminar</button>
+      </td>
+    </tr>
+  </template>
+  <script>
+    // Selección de elementos del DOM y creación de variables
+    const d = document,
+      $table = d.querySelector(".crud-table"),
+      $form = d.querySelector(".crud-form"),
+      $title = d.querySelector(".crud-title"),
+      $template = d.getElementById("crud-template").content,
+      $fragment = d.createDocumentFragment();
+
+    // OBTENER - GET
+    // Función para obtener todos los Santos - GET
+    const getAllSaints = async () => {
+      try {
+        // Realizar la solicitud fetch para obtener los datos
+        const res = await fetch("http://localhost:3000/santos")
+        let data = await res.json()
+        console.log(data)
+        // Lanzar un error si la respuesta no es OK
+        if (!res.ok) throw { status: res.status, statusText: res.statusText };
+
+        // Iterar sobre los datos obtenidos
+        data.forEach(saint => {
+          // Rellenar el template con los datos de cada Santo
+          $template.querySelector(".id").textContent = saint.id;
+          $template.querySelector(".name").textContent = saint.nombre;
+          $template.querySelector(".constellation").textContent = saint.constelacion;
+
+          //DATA PARA LOS BOTONES
+          // Añadir los datos al dataset de los botones
+          $template.querySelector(".edit").dataset.id = saint.id;
+          $template.querySelector(".edit").dataset.name = saint.nombre;
+          $template.querySelector(".edit").dataset.constellation = saint.constelacion;
+          $template.querySelector(".delete").dataset.id = saint.id;
+
+          // Clonar el template y añadirlo al fragmento
+          let $clone = d.importNode($template, true);
+          $fragment.appendChild($clone);
+        });
+
+        // Añadir el fragmento al tbody de la tabla
+        $table.querySelector("tbody").appendChild($fragment);
+      } catch (err) {
+        // Mostrar mensaje de error si algo sale mal
+        let message = err.statusText || "Ocurrió un error";
+        $table.insertAdjacentHTML("afterend", `<p>Ocurrio un error : ${err}</p>`)
+      }
+    }
+
+    // Ejecutar la función getAllSaints cuando el contenido del DOM esté cargado
+    document.addEventListener("DOMContentLoaded", getAllSaints)
+
+    // Event listener para manejar el envío del formulario
+    document.addEventListener("submit", async (event) => {
+      //CREATE - POST
+      console.log(event.target.id.value)
+      // Verificar si el formulario enviado es el de CRUD
+      if (event.target === $form) {
+        event.preventDefault()
+
+        // Verificar si el campo ID está vacío (Crear nuevo Santo)
+        if (!event.target.id.value) {
+          try {
+            let options = {
+              method: "POST",
+              headers: {
+                "Content-type": "application/json; charset=utf-8",
+              },
+              body: JSON.stringify({
+                nombre: event.target.nombre.value,
+                constelacion: event.target.constelacion.value,
+              }),
+            }
+
+            // Realizar la solicitud fetch para crear un nuevo Santo
+            let res = await fetch("http://localhost:3000/santos", options);
+            let data = await res.json()
+
+            // Lanzar un error si la respuesta no es OK
+            if (!res.ok) throw { status: res.status, statusText: res.statusText };
+
+            // Recargar la página después de la creación exitosa
+            location.reload()
+          } catch (err) {
+            // Manejar errores y mostrar un mensaje al usuario
+            console.log(err)
+            let message = err.statusText || "Ocurrió un error";
+            $form.insertAdjacentHTML("afterend", `<p><b>Error ${err.status}: ${message}</b></p>`)
+          };
+        } else {
+          //UPDATE - PUT    
+          // Actualizar un Santo existente - PUT 
+          try {
+            let options = {
+              method: "PUT",
+              headers: {
+                "Content-type": "application/json; charset=utf-8",
+              },
+              body: JSON.stringify({
+                nombre: event.target.nombre.value,
+                constelacion: event.target.constelacion.value,
+              }),
+            }
+
+            // Realizar la solicitud fetch para actualizar el Santo existente
+            let res = await fetch(`http://localhost:3000/santos/${event.target.id.value}`, options)
+            let data = await res.json()
+
+            // Lanzar un error si la respuesta no es OK
+            if (!res.ok) throw { status: res.status, statusText: res.statusText };
+
+            // Lanzar un error si la respuesta no es OK
+            location.reload()
+          } catch (err) {
+            // Lanzar un error si la respuesta no es OK
+            console.log(err)
+            let message = err.statusText || "Ocurrió un error";
+            $form.insertAdjacentHTML("afterend", `<p><b>Error ${err.status}: ${message}</b></p>`)
+          }
+        }
+      }
+    });
+
+    // Agregar un event listener para manejar los clics en todo el documento
+    document.addEventListener("click", async (event) => {
+      // Verificar si el clic fue en un elemento con la clase "edit"
+      if (event.target.matches(".edit")) {
+        const id = event.target.dataset.id
+        const name = event.target.dataset.name
+        const constellation = event.target.dataset.constellation
+
+        // Verificar si el clic fue en un elemento con la clase "edit"
+        $title.textContent = "Editar Santo"
+
+        // Rellenar los campos del formulario con los datos obtenidos
+        $form.nombre.value = name
+        $form.constelacion.value = constellation
+        $form.id.value = id
+      }
+
+      // Verificar si el clic fue en un elemento con la clase "delete"
+      if (event.target.matches(".delete")) {
+
+        const id = event.target.dataset.id
+        // Preguntar al usuario si está seguro de que quiere eliminar el elemento
+        let isDelete = confirm(`Estas seguro que deseas borrar el Santo con el id: ${id}`)
+
+        if (isDelete) {
+          //DELETE
+          try {
+            // Si el usuario confirma la eliminación, realizar la solicitud DELETE
+            let options = {
+              method: "DELETE",
+              headers: {
+                "Content-type": "application/json; charset=utf-8",
+              },
+            }
+
+            // Hacer la solicitud fetch para eliminar el elemento
+            let res = await fetch(`http://localhost:3000/santos/${event.target.dataset.id}`, options)
+            let data = await res.json()
+
+            // Verificar si la respuesta no es OK y lanzar un error
+            if (!res.ok) throw { status: res.status, statusText: res.statusText };
+
+            // Recargar la página después de la eliminación exitosa
+            location.reload()
+          } catch (err) {
+            console.log(err)
+            // Manejar errores y mostrar un mensaje de alerta al usuario
+            let message = err.statusText || "Ocurrió un error";
+            alert(`Ocurrio un error inesperado al eliminar el Santo. Error: ${message}`)
+          }
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
