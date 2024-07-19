@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sitio Con AJAX</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 100vh;
+    }
+  
+    header {
+      background-color: rgb(253, 235, 215);
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      font-weight: 600;
+    }
+
+    .icon span {
+      font-size: 40px;
+    }
+
+    .icon a {
+      text-decoration: none;
+    }
+
+    nav ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    ul li {
+      list-style-type: none;
+    }
+
+    nav a {
+      font-size: 18px;
+      color: rgb(200, 122, 71);
+      padding: 5px 10px;
+    }
+
+    /* CONTENIDO DE IMAGEN  */
+    img {
+      max-width: 300px;
+      height: auto;
+      object-fit: cover;
+    }
+
+    main {
+      flex-grow: 1;
+    }
+
+    footer {
+      background-color: rgb(253, 235, 215);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="icon">
+      <a href="index-ajax.html"><span>🦊</span></a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="assets/home.html"  class="navigation-link">Home</a></li>
+        <li><a href="assets/acerca.html" class="navigation-link">Acerca</a></li>
+        <li><a href="assets/servicios.html" class="navigation-link">Servicios</a></li>
+        <li><a href="assets/contacto.html" class="navigation-link">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main">
+    <article id="content-page">
+
+    </article>
+  </main>
+  <footer>
+    <p>Hecho con amor ❤️</p>
+  </footer>
+  <script type="module" src="javascript-ajax/ajax.js"></script>
+</body>
+</html>
