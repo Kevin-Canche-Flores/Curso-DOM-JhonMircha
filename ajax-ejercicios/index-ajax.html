@@ -50,7 +50,7 @@
     nav a {
       font-size: 18px;
       color: rgb(200, 122, 71);
-      padding: 5px 10px;
+      padding: 5px 15px;
     }
 
     /* CONTENIDO DE IMAGEN  */
@@ -66,31 +66,17 @@
 
     footer {
       background-color: rgb(253, 235, 215);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="icon">
-      <a href="index-ajax.html"><span>🦊</span></a>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="assets/home.html"  class="navigation-link">Home</a></li>
-        <li><a href="assets/acerca.html" class="navigation-link">Acerca</a></li>
-        <li><a href="assets/servicios.html" class="navigation-link">Servicios</a></li>
-        <li><a href="assets/contacto.html" class="navigation-link">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main id="main">
-    <article id="content-page">
-
-    </article>
-  </main>
-  <footer>
-    <p>Hecho con amor ❤️</p>
-  </footer>
+  <header id="header"></header>
+  <main id="main"></main>
+  <footer id="footer"></footer>
   <script type="module" src="javascript-ajax/ajax.js"></script>
 </body>
 </html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Blog Markdown con Shadown JS</title>
+  <style>
+    /* CSS here */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-size: 16px;
+      font-family: sans-serif;
+    }
+
+    *, *:before, *:after {
+      margin: 0;
+      padding: 0;
+      box-sizing: inherit;
+    }
+
+    body {
+      max-width: 800px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    li {
+      margin-left: 1rem;
+    }
+
+    img {
+      max-width: 50%;
+      height: auto;
+      object-fit: cover;
+     margin-top: .5rem;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: rgb(22, 27, 34);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Blog Markdown con Shadown.js</h1>
+  <main id="main_content">
+
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
+  <script type="module">
+
+    const $main = document.getElementById("main_content")
+    
+    try {
+      const response = await fetch("./media/md/blog-mexico.md")
+    
+      const text = await response.text()
+      console.log(text)
+      const converter = new showdown.Converter()
+      const html = converter.makeHtml(text)
+      $main.innerHTML = html
+    } catch (error) {
+      console.log(error)
+      let message = `${error.statusText}- Error al cargar el contenido`;
+      $main.innerHTML = message
+    }
+  </script>
+</body>
+
+</html>
