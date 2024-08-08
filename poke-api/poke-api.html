@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="img/poke-favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+  <title>Poke API</title>
+</head>
+
+<body>
+  <header>
+    <main>
+      <img src="img/International_Pokémon_logo.svg.png" alt="Logo de Pokédex">
+    </main>
+    <footer></footer>
+  </header>
+  <main class="main">
+    
+    <div class="loader"></div>
+    <section class="pokemons-list">
+    </section>
+
+    <!-- Paginación de los pokemons -->
+    <section class="pagination-section">
+      <!-- Navegar por los pokemons (next y prev) y cargar los datos en el listado de pokemons -->
+      <div class="pagination">
+        <button type="button" class="btn-prev">Previous</button>
+        <button type="button" class="btn-next">Next</button>
+      </div>
+
+    </section>
+  </main>
+  <footer class="footer">
+    <main>
+      <p>Hecho con ❤️ por <a href="https://twitter.com/kanonflores11">Kano Flores011</a> </p>
+    </main>
+  </footer>
+
+  <!-- Template para mostrar los pokemons -->
+  <template id="pokemon-template">
+    <figure>
+      <img class="pokemon-image">
+      <figcaption>
+        <h2 class="pokemon-name"></h2>
+        <span class="pokemon-id"></span>
+        <div class="types-pokemon"></div>
+      </figcaption>
+    </figure>
+  </template>
+  <script type="module" src="poke.js"></script>
+</body>
+
+</html>
