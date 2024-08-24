@@ -112,9 +112,17 @@ const dataPokemon = async (pokemon) => {
       $boxType.appendChild($spanType);
     });
     
+console.log(data);
 
     $pokemonTemplate.querySelector(".pokemon-name").textContent = data.name;
-    $pokemonTemplate.querySelector(".pokemon-image").src = data.sprites.other.dream_world.front_default;
+
+    /* Si el sprites.other.dream_world.front_default no es null, se carga el sprite de la imagen de la pokemon en el template de cada pokemon (.pokemon-template) y añadirlo al fragmento (.pokemons-list) */
+    data.sprites.other.dream_world.front_default != null 
+    ? $pokemonTemplate.querySelector(".pokemon-image").src = data.sprites.other.dream_world.front_default 
+    : $pokemonTemplate.querySelector(".pokemon-image").src = data.sprites.other.home.front_default;
+
+    $pokemonTemplate.querySelector(".pokemon-image").alt = data.name;
+
     $pokemonTemplate.querySelector(".pokemon-id").textContent = `N.° ${formmatedId(data.id)}`;
 
       // Clonar el template y añadirlo al fragmento
