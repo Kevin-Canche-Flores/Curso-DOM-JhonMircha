@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Buscador de canciones">
+  <meta name="keywords" content="buscador de canciones, canciones, api, javascript">
+  <meta name="authot" content="Kevin Canche Flores">
+  <meta name ="color-scheme" content="light dark">
+  <link rel="shortcut icon" href="assets/img/logo-musica.jfif" type="image/x-icon">
+  <title rel="stylesheet">Buscador dor de Canciones</title>
+  <script src="https://kit.fontawesome.com/02ebd8f96e.js" crossorigin="anonymous" defer></script>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="assets/img/logo-musica.jfif" alt="logo musica" title="logo música">
+      <h1>Buscador de Canciones</h1>
+    </header>
+    <main>
+      <form>
+        <div class="search">
+          <!-- Interprete -->
+          <div class="box_search-interprete">
+            <input class="search_interptete" type="text" placeholder="Buscar interprete..." required>
+            <i class="fa-solid"></i>
+          </div>
+          <!-- Canción -->
+          <div class="box_search-song">
+            <input class="search_song" type="text" placeholder="Buscar canción..." required>
+            <i class="fa-solid"></i>
+          </div>
+          <!-- Botón de busqueda -->
+          <div class="box_button">
+            <button id="btn-search" class="buttom_search" type="submit" title="Buscar canciones">Buscar</button>
+          </div>
+        </div>
+      </form>
+      <div class="loader"></div>
+      <div class="error"></div>
+      <!-- Sección de canciones -->
+      <section class="section_songs">
+        <div class="artist"></div>
+        <div class="lyrics"></div>
+      </section>
+    </main>
+    <footer class="footer">
+      <main class="main-footer">
+        <p>Desarrollado por <b>Kevin Canche Flores.</b></p>
+        <p>© 2024 Todos los derechos reservados.</p>
+      </main>
+      <footer class="footer-github">
+        <p>Link a mi <a href="https://github.com/Kevin-Canche-Flores" target="_blank" rel="noopener" title="GitHub">GitHub.</a></p>
+        <p>Hecho con ❤️ para el mundo...</p>
+      </footer>
+    </footer>
+  </div>
+  <script src="js/index.js"></script>
+</body>
+</html>
