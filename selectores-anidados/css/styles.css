@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 80%;
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.wrapper h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.wrapper form {
+  display: flex;
+  flex-direction: column;
+}
+
+form .select-states , form .select-municipalities {
+  width: 200px;
+  margin-bottom: 1.5rem;
+}
+
+.states, .municipalities {
+  height: 25px;
+  width: 100%;
+  margin-top: .5rem;
+}
+
+.select-states p, .select-municipalities p {
+  font-weight: 700;
+  color : rgb(230, 32, 41);
+  margin-top: 1rem
+}
